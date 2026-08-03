@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/*
+  Designsystem der Praxis am Lindenmarkt.
+
+  Die Palette meidet bewusst das Klinikweiß. Warmes Papier plus tiefes Moosgrün
+  liest sich ruhiger und ist für ältere Augen kontrastreicher als Grau auf Weiß.
+  Alle Farbpaare sind mit scripts/check-contrast.mjs auf WCAG 2.1 AA geprüft.
+*/
+
+@theme {
+  --color-paper: #f7f4ec;
+  --color-paper-2: #efeadd;
+  --color-paper-3: #e5decd;
+  --color-ink: #14201b;
+  --color-ink-2: #26332c;
+  --color-muted: #55645b;
+  --color-moss: #1c5a48;
+  --color-moss-600: #154639;
+  --color-moss-100: #dbe7e0;
+  --color-clay: #a84a26;
+  --color-line: #ded6c4;
+  --color-line-dark: #3a463f;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+
+  --radius-card: 1.25rem;
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    font-variation-settings: "SOFT" 30, "WONK" 1;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Sichtbarer Fokus ist Pflicht nach WCAG 2.4.7. Der Ring liegt außen an,
+     damit er auf jedem Untergrund erkennbar bleibt. */
+  :focus-visible {
+    outline: 3px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-moss);
+    color: var(--color-paper);
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+  }
+}
+
+@utility wrap {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Feines Papierkorn. Rein dekorativ, deshalb per CSS und nicht als Bilddatei. */
+@utility grain {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Scroll-Reveal. Ohne aktives JS bleibt alles sichtbar, das ist Absicht. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease-out-soft),
+    transform 0.7s var(--ease-out-soft);
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+html:not(.js) [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Wurde die Demo-Leiste einmal geschlossen, setzt ein Skript im head diese
+   Klasse, bevor der Browser zeichnet. Die Leiste erscheint gar nicht erst. */
+.demo-aus .demo-bar {
+  display: none;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+.dot-live {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

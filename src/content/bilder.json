@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "alt": "Empfangstresen der Praxis mit Blick in den Wartebereich",
+    "breite": 1600,
+    "hoehe": 1100,
+    "suche": "medical practice reception desk warm daylight interior"
+  },
+  "wartezimmer": {
+    "alt": "Wartebereich mit Holzstühlen und großen Fenstern zur Straße",
+    "breite": 1400,
+    "hoehe": 1120,
+    "suche": "clinic waiting room wooden chairs daylight window"
+  },
+  "sprechzimmer": {
+    "alt": "Sprechzimmer mit Schreibtisch, Untersuchungsliege und Pflanze am Fenster",
+    "breite": 1200,
+    "hoehe": 750,
+    "suche": "doctor consultation room desk plant calm"
+  },
+  "labor": {
+    "alt": "Blutröhrchen und Etiketten auf einer Laborablage",
+    "breite": 1200,
+    "hoehe": 750,
+    "suche": "medical laboratory blood sample tubes close up"
+  },
+  "impfung": {
+    "alt": "Impfstoffampulle und Spritze auf einem Tablett",
+    "breite": 1200,
+    "hoehe": 750,
+    "suche": "vaccine vial syringe tray clinic"
+  },
+  "geraet": {
+    "alt": "Blutdruckmessgerät auf einem Beistelltisch",
+    "breite": 1200,
+    "hoehe": 750,
+    "suche": "blood pressure monitor medical device table"
+  },
+  "ultraschall": {
+    "alt": "Ultraschallgerät mit Schallkopf im Untersuchungsraum",
+    "breite": 1200,
+    "hoehe": 750,
+    "suche": "ultrasound machine examination room medical"
+  },
+  "hausbesuch": {
+    "alt": "Arzttasche und Notizblock auf einem Küchentisch",
+    "breite": 1200,
+    "hoehe": 750,
+    "suche": "doctor bag stethoscope home visit table"
+  },
+  "flur": {
+    "alt": "Heller Praxisflur mit Türen zu den Behandlungsräumen",
+    "breite": 900,
+    "hoehe": 1200,
+    "suche": "bright clinic hallway doors interior architecture"
+  },
+  "ottensen": {
+    "alt": "Straßenzug in Hamburg-Ottensen mit Altbauten und Bäumen",
+    "breite": 1600,
+    "hoehe": 900,
+    "suche": "hamburg street old apartment buildings trees"
+  },
+  "vogt": {
+    "alt": "Porträt von Dr. med. Katharina Vogt",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait woman doctor forties natural light neutral background",
+    "initialen": "KV"
+  },
+  "reinhardt": {
+    "alt": "Porträt von Dr. med. Jonas Reinhardt",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait man doctor forties natural light neutral background",
+    "initialen": "JR"
+  },
+  "alkan": {
+    "alt": "Porträt von Miriam Alkan",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait woman physician thirties natural light",
+    "initialen": "MA"
+  },
+  "kroeger": {
+    "alt": "Porträt von Sabine Kröger",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait woman medical assistant fifties friendly",
+    "initialen": "SK"
+  },
+  "nguyen": {
+    "alt": "Porträt von Tuan Nguyen",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait man medical assistant thirties",
+    "initialen": "TN"
+  },
+  "petersen": {
+    "alt": "Porträt von Nele Petersen",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait woman nurse thirties",
+    "initialen": "NP"
+  },
+  "brandt": {
+    "alt": "Porträt von Lea Brandt",
+    "breite": 800,
+    "hoehe": 1000,
+    "suche": "portrait young woman apprentice office",
+    "initialen": "LB"
+  }
+}
