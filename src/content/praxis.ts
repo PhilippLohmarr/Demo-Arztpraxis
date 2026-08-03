@@ -52,13 +52,6 @@ export const praxis = {
     hinweis: "Gedacht für alle, die tagsüber nicht wegkönnen. Nur mit Termin.",
   },
 
-  zahlen: [
-    { wert: "3", label: "Ärztinnen und Ärzte" },
-    { wert: "20 Min.", label: "pro Vorsorgetermin" },
-    { wert: "2 Tage", label: "mittlere Wartezeit auf einen Termin" },
-    { wert: "5", label: "Sprachen im Team" },
-  ],
-
   sprachen: ["Deutsch", "Englisch", "Türkisch", "Französisch", "Vietnamesisch"],
 
   kassen:

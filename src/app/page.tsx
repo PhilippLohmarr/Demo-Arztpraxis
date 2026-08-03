@@ -133,29 +133,8 @@ export default function Startseite() {
         </div>
       ) : null}
 
-      {/* Kennzahlen */}
-      <section className="py-16 md:py-20">
-        <div className="wrap">
-          <dl className="grid grid-cols-2 gap-x-8 gap-y-10 border-y border-line py-12 md:grid-cols-4">
-            {praxis.zahlen.map((zahl) => (
-              <div key={zahl.label} data-reveal>
-                <dt className="sr-only">{zahl.label}</dt>
-                <dd>
-                  <span className="block font-serif text-[clamp(2.5rem,5vw,3.5rem)] leading-none text-moss">
-                    {zahl.wert}
-                  </span>
-                  <span className="mt-3 block text-sm leading-snug text-muted">
-                    {zahl.label}
-                  </span>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
       {/* Leistungen */}
-      <Abschnitt id="leistungen" className="pt-0">
+      <Abschnitt id="leistungen">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <AbschnittKopf
             eyebrow="Leistungen"
